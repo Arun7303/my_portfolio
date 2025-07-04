@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arun Adhikari - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00f5d4;
+            --secondary-color: #00bbf9;
+            --dark-color: #161a1d;
+            --light-color: #f8f9fa;
+            --accent-color: #f15bb5;
+            --text-color: #e9ecef;
+            --text-dark: #343a40;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Certificates Section */
+        .certificates-container {
+            position: relative;
+            max-width: 100%;
+            margin: 3rem auto;
+            padding: 0 3rem;
+        }
+
+        .certificates-scroller {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0;
+            scrollbar-width: none;
+        }
+
+        .certificates-scroller::-webkit-scrollbar {
+            display: none;
+        }
+
+        .certificate-card {
+            min-width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .certificate-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 1.5rem 1rem 1rem;
+            color: white;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover .certificate-overlay {
+            transform: translateY(0);
+        }
+
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(0, 245, 212, 0.7);
+            color: var(--dark-color);
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-btn:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .scroll-left {
+            left: 0;
+        }
+
+        .scroll-right {
+            right: 0;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(0, 245, 212, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 245, 212, 0.1);
+        }
+
+        .view-project-btn {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .view-project-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 245, 212, 0.4);
+        }
+
+        .project-details {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.5s ease;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .view-code-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .view-code-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        /* Slideshow Styles */
+        .slideshowContainer {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 700px;
+            height: 400px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .imageSlides {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: -1;
+            object-fit: contain;
+            background-color: #000;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        .slideshowArrow {
+            font-size: 3em;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: opacity 0.2s ease-in-out;
+            position: absolute;
+            z-index: 10;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slideshowArrow:hover {
+            color: var(--primary-color);
+            opacity: 1;
+        }
+
+        #leftArrow1, #leftArrow {
+            left: 4%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #rightArrow1, #rightArrow {
+            right: 4%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .slideshowCircles {
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .circle {
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: solid 2px rgba(255, 255, 255, 0.5);
+            transition: 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .dot {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: solid 2px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .certificates-container {
+                padding: 0 1.5rem;
+            }
+            
+            .certificate-card {
+                min-width: 220px;
+                height: 300px;
+            }
+            
+            .scroll-btn {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .certificate-card {
+                min-width: 200px;
+                height: 280px;
+            }
+            
+            .slideshowContainer {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .certificates-container {
+                padding: 0 1rem;
+            }
+            
+            .certificate-card {
+                min-width: 180px;
+                height: 250px;
+            }
+            
+            .scroll-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .slideshowContainer {
+                height: 250px;
+            }
+            
+            .slideshowArrow {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/img1.jpg" alt="Logo" width="40" height="40" class="rounded-circle me-2">
+                <span>Arun Adhikari</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Certificates Section -->
+    <section id="certificates-section" class="section">
+        <div class="container">
+            <h2 class="section-title">My Certificates</h2>
+            
+            <div class="certificates-container">
+                <div class="certificates-scroller">
+                    <!-- Certificate 1 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal1">
+                        <img src="/cert/hackathon cert/cyber_2023_winner_visio.png" alt="Visinory Hackathon">
+                        <div class="certificate-overlay">
+                            <h4>Visinory Hackathon</h4>
+                            <p>1st Prize Winner</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 2 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal2">
+                        <img src="/cert/hackathon cert/cyber_tech_fest_24_winner.png" alt="Techfest Hackathon">
+                        <div class="certificate-overlay">
+                            <h4>Techfest Hackathon</h4>
+                            <p>3rd Position</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 3 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal3">
+                        <img src="/cert/hackathon cert/AI_Winners_2nd_Arun Adhikari.png" alt="NSD-2025 AI Hackathon">
+                        <div class="certificate-overlay">
+                            <h4>NSD-2025 AI Hackathon</h4>
+                            <p>2nd Place</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 4 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal4">
+                        <img src="/cert/hackathon cert/D&T_Winners_1st_Arun Adhikari.png" alt="NSD-2025 Design Hackathon">
+                        <div class="certificate-overlay">
+                            <h4>NSD-2025 Design</h4>
+                            <p>2nd Place</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 5 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal5">
+                        <img src="/cert/hackathon cert/Screenshot 2025-03-18 033703.png" alt="Ethical Hacking Workshop">
+                        <div class="certificate-overlay">
+                            <h4>Ethical Hacking</h4>
+                            <p>Workshop</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 6 -->
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#certificateModal6">
+                        <img src="/cert/hackathon cert/Screenshot 2025-03-18 033754.png" alt="Cybersecurity Course">
+                        <div class="certificate-overlay">
+                            <h4>Cybersecurity</h4>
+                            <p>Course Completion</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="scroll-btn scroll-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn scroll-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-section" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            
+            <!-- Project 1 -->
+            <div class="project-card" data-aos="fade-up">
+                <h3>1) FACE RECOGNITION SYSTEM</h3>
+                <p>In this project I have used <b>Local Binary Patterns Histograms (LBPH)</b> algorithm to train the classifiers.</p>
+                
+                <button class="view-project-btn">View Project</button>
+                
+                <div class="project-details">
+                    <h4>How This Code Works?</h4>
+                    <ul>
+                        <li><b>Person Details:</b> This function is designed to collect and store individuals' information in a database. Additionally, it captures the person's image for training purposes.</li>
+                        <li><b>Train Data:</b> Clicking this button opens a new window where data is trained using the Local Binary Patterns Histograms method. The trained data is then stored in the classifiers.xml file.</li>
+                        <li><b>Photos:</b> By clicking this button, all the photos taken are displayed.</li>
+                        <li><b>Scan Face:</b> Upon clicking this button, a new window opens for real-time scanning of a person's face. The details of the scanned face are displayed in real-time.</li>
+                    </ul>
+                    
+                    <div class="slideshowContainer">
+                        <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193016.png" alt="Image 1">
+                        <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193218.png" alt="Image 2">
+                        <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193134.png" alt="Image 3">
+                        <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193242.png" alt="Image 4">
+
+                        <span id="leftArrow1" class="slideshowArrow">&#8249;</span>
+                        <span id="rightArrow1" class="slideshowArrow">&#8250;</span>
+
+                        <div class="slideshowCircles">
+                            <span class="circle dot"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/Arun7303/Face-Recognisition" class="view-code-btn">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>2) AI ASSISTANT FOR PC</h3>
+                <p>In this project, I utilized the Python language to create an AI ASSISTANT FOR PC, aiming to assist with various day-to-day tasks.</p>
+                
+                <button class="view-project-btn">View Project</button>
+                
+                <div class="project-details">
+                    <h4>Project Features:</h4>
+                    <ul>
+                        <li><b>Functionality:</b> The AI assistant can perform a range of tasks such as opening applications, telling jokes, and reading news.</li>
+                        <li><b>API Integration:</b> API keys have been incorporated to enable news reading, and additional API keys can be added to enhance functionality.</li>
+                        <li><b>Application Control:</b> The assistant is capable of opening applications like Word, PowerPoint, Google, etc.</li>
+                        <li><b>Web Browsing:</b> Users can instruct the assistant to open commonly used websites or specify a particular website.</li>
+                        <li><b>Mathematical Operations:</b> Basic mathematical operations can be performed using the assistant.</li>
+                    </ul>
+                    
+                    <img src="/images/AI assistant.png" alt="AI ASSISTANT" class="img-fluid rounded">
+                    
+                    <a href="https://github.com/Arun7303/AI-ASSISTANT-FOR-PC" class="view-code-btn">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>3) LOGIN PAGE WITH OTP (2 STEP VERIFICATION)</h3>
+                <p>This website allows you to perform 2-step verification with email OTP and secure password hashing.</p>
+                
+                <button class="view-project-btn">View Project</button>
+                
+                <div class="project-details">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>2-step verification via email OTP during login</li>
+                        <li>Password hashing using SHA-256 algorithm during signup</li>
+                        <li>Secure password storage in database</li>
+                        <li>Password reset functionality</li>
+                    </ul>
+                    
+                    <div class="slideshowContainer">
+                        <img class="imageSlides" src="/images/Web/login.png" alt="Login Page">
+                        <img class="imageSlides" src="/images/Web/signup.png" alt="Signup Page">
+                        <img class="imageSlides" src="/images/Web/otp.png" alt="OTP Verification">
+                        <img class="imageSlides" src="/images/Web/resetpass.png" alt="Password Reset">
+
+                        <span id="leftArrow" class="slideshowArrow">&#8249;</span>
+                        <span id="rightArrow" class="slideshowArrow">&#8250;</span>
+
+                        <div class="slideshowCircles">
+                            <span class="circle dot"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                            <span class="circle"></span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/Arun7303/Website_with_otp" class="view-code-btn">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements-section" class="section">
+        <div class="container">
+            <h2 class="section-title">My Achievements</h2>
+            <div class="timeline">
+                <!-- Achievement 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>1st Prize - Visinory Hackathon</h3>
+                        <p>Won first prize in Visinory Hackathon organized by Visinory Club in the domain of Cyber Security.</p>
+                        <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#certificateModal1">View Certificate</button>
+                    </div>
+                </div>
+                
+                <!-- Achievement 2 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>3rd Position - Visinory Techfest Hackathon</h3>
+                        <p>Won 3rd position in Visinory Techfest Hackathon 2024 organized by Vishwakarma University in collaboration with Binghamton University, New York.</p>
+                        <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#certificateModal2">View Certificate</button>
+                    </div>
+                </div>
+                
+                <!-- Achievement 3 -->
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>2nd Place - NSD-2025 Hackathon (AI)</h3>
+                        <p>Won 2nd place in National Science Day 2025 Hackathon in AI domain for creating an anomaly detection system for network traffic.</p>
+                        <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#certificateModal3">View Certificate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modals -->
+    <div class="modal fade" id="certificateModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title">Visinory Hackathon - 1st Prize</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="/cert/hackathon cert/cyber_2023_winner_visio.png" class="img-fluid" alt="Visinory Hackathon Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other certificates -->
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Certificate Scroller Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const scroller = document.querySelector('.certificates-scroller');
+            const scrollLeftBtn = document.querySelector('.scroll-left');
+            const scrollRightBtn = document.querySelector('.scroll-right');
+            
+            if (scroller && scrollLeftBtn && scrollRightBtn) {
+                scrollLeftBtn.addEventListener('click', function() {
+                    scroller.scrollBy({
+                        left: -300,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                scrollRightBtn.addEventListener('click', function() {
+                    scroller.scrollBy({
+                        left: 300,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                // Hide/show scroll buttons based on scroll position
+                scroller.addEventListener('scroll', function() {
+                    scrollLeftBtn.style.display = scroller.scrollLeft > 0 ? 'flex' : 'none';
+                    scrollRightBtn.style.display = scroller.scrollLeft < (scroller.scrollWidth - scroller.clientWidth) ? 'flex' : 'none';
+                });
+                
+                // Initial state
+                scrollLeftBtn.style.display = 'none';
+                if (scroller.scrollWidth <= scroller.clientWidth) {
+                    scrollRightBtn.style.display = 'none';
+                }
+            }
+            
+            // Project View Toggle Functionality
+            const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+            
+            viewProjectBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const projectCard = this.closest('.project-card');
+                    const details = projectCard.querySelector('.project-details');
+                    const isShowing = details.style.display === 'block';
+                    
+                    // Close all other project details first
+                    document.querySelectorAll('.project-details').forEach(detail => {
+                        if (detail !== details) {
+                            detail.style.display = 'none';
+                            detail.previousElementSibling.textContent = 'View Project';
+                        }
+                    });
+                    
+                    // Toggle current project
+                    if (isShowing) {
+                        details.style.display = 'none';
+                        this.textContent = 'View Project';
+                    } else {
+                        details.style.display = 'block';
+                        this.textContent = 'Hide Project';
+                        
+                        // Scroll to show the full expanded project
+                        setTimeout(() => {
+                            projectCard.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'nearest'
+                            });
+                        }, 100);
+                    }
+                });
+            });
+
+            // Initialize slideshows
+            initSlideshows();
+        });
+
+        function initSlideshows() {
+            // Initialize all slideshows
+            const slideshowContainers = document.querySelectorAll('.slideshowContainer');
+            
+            slideshowContainers.forEach(container => {
+                initSlideshow(
+                    container,
+                    'imageSlides',
+                    container.querySelector('#leftArrow1') ? '#leftArrow1' : '#leftArrow',
+                    container.querySelector('#rightArrow1') ? '#rightArrow1' : '#rightArrow',
+                    'circle'
+                );
+            });
+        }
+
+        function initSlideshow(slideshowContainer, imageClass, leftArrowId, rightArrowId, circleClass) {
+            const imageSlides = slideshowContainer.getElementsByClassName(imageClass);
+            const circles = slideshowContainer.getElementsByClassName(circleClass);
+            const leftArrow = slideshowContainer.querySelector(leftArrowId);
+            const rightArrow = slideshowContainer.querySelector(rightArrowId);
+            let counter = 0;
+            let imageSlideshowInterval;
+
+            // Hide all images
+            function hideImages() {
+                for (let i = 0; i < imageSlides.length; i++) {
+                    imageSlides[i].classList.remove('visible');
+                }
+            }
+
+            // Remove all dots
+            function removeDots() {
+                for (let i = 0; i < circles.length; i++) {
+                    circles[i].classList.remove('dot');
+                }
+            }
+
+            // Single image loop/circles
+            function imageLoop() {
+                const currentImage = imageSlides[counter];
+                const currentDot = circles[counter];
+                currentImage.classList.add('visible');
+                removeDots();
+                currentDot.classList.add('dot');
+                counter++;
+            }
+
+            // Left & right arrow function
+            function arrowClick(e) {
+                const target = e.currentTarget;
+                clearInterval(imageSlideshowInterval);
+                hideImages();
+                removeDots();
+                
+                if (target === leftArrow) {
+                    if (counter === 1) {
+                        counter = (imageSlides.length - 1);
+                    } else if (counter === 0) {
+                        counter = imageSlides.length - 1;
+                    } else {
+                        counter -= 2;
+                    }
+                } else if (target === rightArrow) {
+                    if (counter === imageSlides.length) {
+                        counter = 0;
+                    }
+                }
+                
+                imageLoop();
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+            }
+
+            // Add event listeners for arrows
+            if (leftArrow) leftArrow.addEventListener('click', arrowClick);
+            if (rightArrow) rightArrow.addEventListener('click', arrowClick);
+
+            // Image slide function
+            function slideshow() {
+                if (counter < imageSlides.length) {
+                    imageLoop();
+                } else {
+                    counter = 0;
+                    hideImages();
+                    imageLoop();
+                }
+            }
+
+            // Show first image, then set & call slide interval
+            setTimeout(() => {
+                hideImages();
+                removeDots();
+                if (imageSlides.length > 0) {
+                    imageSlides[0].classList.add('visible');
+                    circles[0].classList.add('dot');
+                    counter = 1;
+                }
+            }, 100);
+
+            // Only start autoplay if there are images
+            if (imageSlides.length > 0) {
+                imageSlideshowInterval = setInterval(slideshow, 10000);
+            }
+
+            // Pause on hover
+            slideshowContainer.addEventListener('mouseenter', () => {
+                clearInterval(imageSlideshowInterval);
+            });
+
+            slideshowContainer.addEventListener('mouseleave', () => {
+                if (imageSlides.length > 0) {
+                    imageSlideshowInterval = setInterval(slideshow, 10000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,434 +1,1285 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arun Adhikari | Cybersecurity Professional</title>
 
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" href="/images/img1.jpg" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arun7303</title>
-</head>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
-        <a class="navbar-brand navbar-logo" href="#">
-            <img src="images/img1.jpg" alt="Image 1" width="25px" height="25px">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="images/img1.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/img1.jpg"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="rounded-circle me-2"
+          />
+          <span class="brand-name">Arun Adhikari</span>
         </a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="fas fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <div class="hori-selector">
-                    <div class="left"></div>
-                    <div class="right"></div>
-                </div>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact-me-section"><i class="fas fa-tachometer-alt"></i>Contact</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#about-me-section"><i class="far fa-address-book"></i>About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects-section"><i class="far fa-clone"></i>Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#achievements-section"><i class="far fa-calendar-alt"></i>Achievements</a>
-                </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="#courses-section"><i class="far fa-chart-bar"></i>Courses</a>
-                </li> -->
-            </ul>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <div id="about-me-section">
-        <div class="pic1">
-            <img src="/images/img1.jpg" alt="profile" height="200" width="200">
-            <h1>Arun Adhikari</h1>
-
-            <div class="me">Vishwakarma University<br>
-                B.Tech Computer Science
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <h1 class="hero-title">Arun Adhikari</h1>
+            <h2 class="hero-subtitle">Cybersecurity Enthusiast</h2>
+            <p class="hero-text">
+              Securing the digital world one line of code at a time
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary me-3">Contact Me</a>
+              <a href="/Arun resume 20_5_25.pdf" class="btn btn-outline-light"
+                >Download CV</a
+              >
             </div>
-
-            <div class="buttons">
-                <a href="https://github.com/Arun7303" target="_blank">
-                    <button>
-                        <img src="/images/github.png" alt="GitHub">
-                    </button>
-                </a>
-
-                <a href="https://www.instagram.com/adhikari_arun/" target="_blank">
-                    <button>
-                        <img src="/images/instagram.png" alt="Instagram">
-                    </button>
-                </a>
-
-                <a href="https://www.linkedin.com/in/arun-adhikari281202/" target="_blank">
-                    <button>
-                        <img src="/images/linkedin.png" alt="LinkedIn">
-                    </button>
-                </a>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="hero-image-container">
+              <img
+                src="images/img1.jpg"
+                alt="Arun Adhikari"
+                class="hero-image"
+              />
+              <div class="tech-icons">
+                <i class="fab fa-python"></i>
+                <i class="fas fa-shield-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fas fa-code"></i>
+              </div>
             </div>
-
-            <div class="aboutme">
-                I'm a passionate cybersecurity enthusiast with a strong desire to secure the digital world.<br>
-                My journey in the realm of cybersecurity began when I realized the critical <br>
-                importance of safeguarding information and systems in today's interconnected world.<br>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div id="projects-section" class="section" style="display: none;">
-
-        <div class="projects">
-            <h2><br>MY PROJECTS</h2>
-        </div>
-
-        <div class="project1">
-
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-            <h2>1) FACE RECOGNITION SYSTEM</h2>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-
-            <h3>In this project I have used <b>Local Binary Patterns Histograms (LBPH) </b>algorithm to train the
-                classifiers. <br></h3>
-            <h2>How This Code Works?</h2>
-            <div class="txt">
-                •)Person Details:- Purpose: This function is designed to collect and store individuals' information in a
-                database. Additionally, it captures the person's image for training purposes.<br>
-
-                •)Train Data:- Purpose: Clicking this button opens a new window where data is trained using the <b>Local
-                    Binary Patterns Histograms</b> method. The trained data is then stored in the classifiers.xml
-                file.<br>
-
-                •)Photos:- Purpose: By clicking this button, all the photos taken are displayed.<br>
-
-                •)Scan Face:- Purpose: Upon clicking this button, a new window opens for real-time scanning of a
-                person's face.
-                The details of the scanned face are displayed in real-time.<br>
-
-                <div class="slideshowContainer">
-                    <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193016.png" alt="Image 1"
-                        height="400px" width="700px">
-                    <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193218.png" alt="Image 2"
-                        height="400px" width="700px">
-                    <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193134.png" alt="Image 3"
-                        height="400px" width="700px">
-                    <img class="imageSlides" src="/images/FRS/Screenshot 2023-10-23 193242.png" alt="Image 3"
-                        height="400px" width="700px">
-
-
-                    <span id="leftArrow1" class="slideshowArrow">&#8249;</span>
-                    <span id="rightArrow1" class="slideshowArrow">&#8250;</span>
-
-                    <div class="slideshowCircles">
-                        <span class="circle dot"></span>
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                        <span class="circle"></span>
-                    </div>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-image-container">
+              <img src="images/img1.jpg" alt="About Me" class="about-image" />
+              <div class="about-info">
+                <div class="info-item">
+                  <i class="fas fa-university"></i>
+                  <span>Vishwakarma University</span>
                 </div>
-            </div>
-
-            <a href="https://github.com/Arun7303/Face-Recognisition"><button>View code</button></a>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-        </div>
-
-        <div class="ai-assistant-container">
-            <h2>2) AI ASSISTANT FOR PC</h2>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-            <p class="ai-assistant-text">
-                •) Project Overview:<br>
-                In this project, I utilized the Python language to create an AI ASSISTANT FOR PC, aiming to assist
-                with various day-to-day tasks.<br>
-
-                •)Functionality:<br>
-                The AI assistant can perform a range of tasks such as opening applications, telling jokes, and
-                reading news.<br>
-
-                •)API Integration:<br>
-                API keys have been incorporated to enable news reading, and additional API keys can be added to
-                enhance the overall user experience and functionality.<br>
-
-                •)Application Control:<br>
-                The assistant is capable of opening applications like Word, PowerPoint, Google, etc.<br>
-
-                •)Web Browsing:<br>
-                Users can instruct the assistant to open commonly used websites or specify a particular website of
-                their choice. Wikipedia can also be accessed through the program by stating "search Wikipedia for +
-                query."<br>
-
-                •)Mathematical Operations:<br>
-                Basic mathematical operations such as addition, subtraction, multiplication, and division can be
-                performed using the assistant.<br>
-            </p>
-            <img src="/images/AI assistant.png" alt="AI ASSISTANT" class="ai-assistant-image"><br><br><br>
-            <a href="https://github.com/Arun7303/AI-ASSISTANT-FOR-PC"><button>View code</button></a>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray"><br><br>
-        </div>
-
-        <div class="project3">
-            <h2>3)LOGIN PAGE WITH OTP (2 STEP VERIFICATION)</h2>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-            <p class="project3-text">
-                •) This website allows you to perform 2-step verification. When logging in, you will need to enter
-                an OTP that will be sent to your email.<br>
-                •) During the sign-up process on the website, for enhanced security, the password is hashed using
-                the "SHA-256" algorithm and stored in the database.<br>
-                •) When logging in on the website, it will first check the entered password against the hashed
-                password in the database. If the passwords match, you will receive an OTP in the email you used for
-                signing up.
-            </p>
-
-            <div class="slideshowContainer">
-                <img class="imageSlides" src="/images/Web/login.png" alt="login" height="400px" width="700px">
-                <img class="imageSlides" src="/images/Web/signup.png" alt="sign-up" height="400px" width="700px">
-                <img class="imageSlides" src="/images/Web/reset.png" alt="reset" height="400px" width="700px">
-                <img class="imageSlides" src="/images/Web/otp.png" alt="otp" height="400px" width="700px">
-                <img class="imageSlides" src="/images/Web/resetpass.png" alt="resetpass" height="400px" width="700px">
-                <img class="imageSlides" src="/images/Web/final.png" alt="final" height="400px" width="700px">
-
-                <span id="leftArrow" class="slideshowArrow">&#8249;</span>
-                <span id="rightArrow" class="slideshowArrow">&#8250;</span>
-
-                <div class="slideshowCircles">
-                    <span class="circle dot"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
+                <div class="info-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>B.Tech Computer Science</span>
                 </div>
+                <div class="info-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>Mumbai, Maharashtra</span>
+                </div>
+              </div>
             </div>
-            <a href="https://github.com/Arun7303/Website_with_otp"><button>View code</button></a>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray"><br><br>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="about-content">
+              <h3>Cybersecurity Passionate</h3>
+              <p>
+                I'm a passionate cybersecurity enthusiast with a strong desire
+                to secure the digital world. My journey in cybersecurity began
+                when I realized the critical importance of safeguarding
+                information and systems in today's interconnected world.
+              </p>
+
+              <div class="skills">
+                <h4>My Skills</h4>
+                <div class="skill-item">
+                  <span>Python</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>Cybersecurity</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>Machine Learning</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <a href="https://github.com/Arun7303" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/arun-adhikari281202/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/adhikari_arun/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">My Achievements</h2>
+        <div class="timeline">
+          <!-- Achievement 1 -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <h3>1st Prize - Visinory Hackathon</h3>
+              <p>
+                Won first prize in Visinory Hackathon organized by Visinory Club
+                in the domain of Cyber Security.
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-light"
+                data-bs-toggle="modal"
+                data-bs-target="#achievementModal"
+                data-cert-src="/cert/hackathon cert/cyber_2023_winner_visio.png"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <h3>3rd Position - Visinory Techfest Hackathon</h3>
+              <p>
+                Won 3rd position in Visinory Techfest Hackathon 2024 organized
+                by Vishwakarma University in collaboration with Binghamton
+                University, New York.
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-light"
+                data-bs-toggle="modal"
+                data-bs-target="#achievementModal"
+                data-cert-src="/cert/hackathon cert/cyber_tech_fest_24_winner.png"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>2nd Place - NSD-2025 Hackathon (AI)</h3>
+              <p>
+                Won 2nd place in National Science Day 2025 Hackathon in AI
+                domain for creating an anomaly detection system for network
+                traffic.
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-light"
+                data-bs-toggle="modal"
+                data-bs-target="#achievementModal"
+                data-cert-src="/cert/hackathon cert/AI_Winners_2nd_Arun Adhikari.png"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+
+          <!-- Achievement 4 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>2nd Place - NSD-2025 Hackathon (Design)</h3>
+              <p>
+                Won 2nd place in National Science Day 2025 Hackathon in Design
+                and Thinking domain for creating an online pet store.
+              </p>
+              <a
+                href="#"
+                class="btn btn-sm btn-outline-light"
+                data-bs-toggle="modal"
+                data-bs-target="#achievementModal"
+                data-cert-src="/cert/hackathon cert/D&T_Winners_1st_Arun Adhikari.png"
+                >View Certificate</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+      <div class="container">
+        <h2 class="section-title">My Certificates</h2>
+
+        <div class="certificates-container">
+          <div class="certificates-scroller">
+            <!-- Certificate 1 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/cyber_2023_winner_visio.png"
+            >
+              <img
+                src="/cert/hackathon cert/cyber_2023_winner_visio.png"
+                alt="Visinory Hackathon"
+              />
+              <div class="certificate-overlay">
+                <h4>Visinory Hackathon</h4>
+                <p>1st Prize Winner</p>
+              </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/cyber_tech_fest_24_winner.png"
+            >
+              <img
+                src="/cert/hackathon cert/cyber_tech_fest_24_winner.png"
+                alt="Techfest Hackathon"
+              />
+              <div class="certificate-overlay">
+                <h4>Techfest Hackathon</h4>
+                <p>3rd Position</p>
+              </div>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/AI_Winners_2nd_Arun Adhikari.png"
+            >
+              <img
+                src="/cert/hackathon cert/AI_Winners_2nd_Arun Adhikari.png"
+                alt="NSD-2025 AI Hackathon"
+              />
+              <div class="certificate-overlay">
+                <h4>NSD-2025 AI Hackathon</h4>
+                <p>2nd Place</p>
+              </div>
+            </div>
+
+            <!-- Certificate 4 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/D&T_Winners_1st_Arun Adhikari.png"
+            >
+              <img
+                src="/cert/hackathon cert/D&T_Winners_1st_Arun Adhikari.png"
+                alt="NSD-2025 Design Hackathon"
+              />
+              <div class="certificate-overlay">
+                <h4>NSD-2025 Design</h4>
+                <p>2nd Place</p>
+              </div>
+            </div>
+
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/coursera/ibm/ibm.png"
+            >
+              <img
+                src="/cert/coursera/ibm/ibm.png"
+                alt="IBM Certificate"
+              />
+              <div class="certificate-overlay">
+                <h4>IBM Cybersecurity</h4>
+                <p>Course Completion</p>
+              </div>
+            </div>
+
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/coursera/university/university.png"
+            >
+              <img
+                src="/cert/coursera/university/university.png"
+                alt="University Certificate"
+              />
+              <div class="certificate-overlay">
+                <h4>University Course</h4>
+                <p>Advanced Certification</p>
+              </div>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/Screenshot 2025-03-18 033703.png"
+            >
+              <img
+                src="/cert/hackathon cert/Screenshot 2025-03-18 033703.png"
+                alt="Ethical Hacking Workshop"
+              />
+              <div class="certificate-overlay">
+                <h4>Ethical Hacking</h4>
+                <p>Workshop</p>
+              </div>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/Screenshot 2025-03-18 033754.png"
+            >
+              <img
+                src="/cert/hackathon cert/Screenshot 2025-03-18 033754.png"
+                alt="Cybersecurity Course"
+              />
+              <div class="certificate-overlay">
+                <h4>Cybersecurity</h4>
+                <p>Course Completion</p>
+              </div>
+            </div>
+
+            <!-- Certificate 7 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/Screenshot 2025-03-18 034406.png"
+            >
+              <img
+                src="/cert/hackathon cert/Screenshot 2025-03-18 034406.png"
+                alt="Cisco Cybersecurity"
+              />
+              <div class="certificate-overlay">
+                <h4>Cisco Cybersecurity</h4>
+                <p>Course Completion</p>
+              </div>
+            </div>
+
+            <!-- Certificate 8 -->
+            <div
+              class="certificate-card"
+              data-bs-toggle="modal"
+              data-bs-target="#certificateModal"
+              data-cert-src="/cert/hackathon cert/sqlinjection.png"
+            >
+              <img
+                src="/cert/hackathon cert/sqlinjection.png"
+                alt="SQL Injection Course"
+              />
+              <div class="certificate-overlay">
+                <h4>SQL Injection</h4>
+                <p>EC-Council Course</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="scroll-btn scroll-left">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="scroll-btn scroll-right">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+
+        <!-- Project Cards Grid -->
+        <div class="row projects-grid">
+          <!-- Project 1 Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="/images/FRS/Screenshot 2023-10-23 193016.png"
+                  alt="Face Recognition System"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Face Recognition System</h3>
+                <p>
+                  Implemented using Local Binary Patterns Histograms (LBPH)
+                  algorithm for training classifiers.
+                </p>
+                <button
+                  class="btn btn-primary view-project-btn"
+                  data-project="project1"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 Card -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/images/AI assistant.png" alt="AI Assistant for PC" />
+              </div>
+              <div class="project-content">
+                <h3>AI Assistant for PC</h3>
+                <p>
+                  Python-based AI assistant capable of various day-to-day tasks
+                  with API integration.
+                </p>
+                <button
+                  class="btn btn-primary view-project-btn"
+                  data-project="project2"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 Card -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img src="/images/Web/login.png" alt="Login Page with OTP" />
+              </div>
+              <div class="project-content">
+                <h3>Login Page with OTP</h3>
+                <p>
+                  Secure login system with 2-step verification via email OTP and
+                  SHA-256 password hashing.
+                </p>
+                <button
+                  class="btn btn-primary view-project-btn"
+                  data-project="project3"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 Card -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM.jpeg"
+                  alt="Login With Face"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Login With Face</h3>
+                <p>
+                  Secure authentication system using OpenCV and Haar Cascade
+                  Classifier for face recognition.
+                </p>
+                <button
+                  class="btn btn-primary view-project-btn"
+                  data-project="project4"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-card">
+              <div class="project-image">
+                <img
+                  src="/images/insider_threat/dash.png"
+                  alt="Insider Threat Detection using ML"
+                />
+              </div>
+              <div class="project-content">
+                <h3>Insider Threat Detection using ML</h3>
+                <p>
+                  Detect anamolies and threats in the organization using advance
+                  AI/ML algorithm.
+                </p>
+                <button
+                  class="btn btn-primary view-project-btn"
+                  data-project="project5"
+                >
+                  View Project
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- Project Details Sections (initially hidden) -->
+        <div id="project-details-container">
+          <!-- Project 1 Details -->
+          <div
+            id="project1-details"
+            class="project-details"
+            style="display: none"
+          >
+            <div class="project-header">
+              <h2>Face Recognition System</h2>
+              <button class="btn btn-close-details">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
 
-        <div class="face_login">
-            <h2>3)LOGIN With Face</h2>
-            <hr class="centered-hr">
-            <p class="fac_login-text">
-            <ul>
-                <li><b>User Registration Process:</b>
+            <div class="project-body">
+              <h3>Project Overview</h3>
+              <p>
+                In this project I have used
+                <b>Local Binary Patterns Histograms (LBPH)</b> algorithm to
+                train the classifiers.
+              </p>
 
-                During the sign-up process, users are required to provide their details along with a photo. This photo
-                is captured and saved in the system for future face recognition purposes.</li>
+              <h3>How This Code Works?</h3>
+              <ul>
+                <li>
+                  <b>Person Details:</b> This function is designed to collect
+                  and store individuals' information in a database.
+                  Additionally, it captures the person's image for training
+                  purposes.
+                </li>
+                <li>
+                  <b>Train Data:</b> Clicking this button opens a new window
+                  where data is trained using the Local Binary Patterns
+                  Histograms method. The trained data is then stored in the
+                  classifiers.xml file.
+                </li>
+                <li>
+                  <b>Photos:</b> By clicking this button, all the photos taken
+                  are displayed.
+                </li>
+                <li>
+                  <b>Scan Face:</b> Upon clicking this button, a new window
+                  opens for real-time scanning of a person's face. The details
+                  of the scanned face are displayed in real-time.
+                </li>
+              </ul>
 
-                <li><b>Face Recognition Technology:</b>
+              <div class="slideshowContainer">
+                <img
+                  class="imageSlides"
+                  src="/images/FRS/Screenshot 2023-10-23 193016.png"
+                  alt="Image 1"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/FRS/Screenshot 2023-10-23 193218.png"
+                  alt="Image 2"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/FRS/Screenshot 2023-10-23 193134.png"
+                  alt="Image 3"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/FRS/Screenshot 2023-10-23 193242.png"
+                  alt="Image 4"
+                />
 
-                The website employs OpenCV (cv2) and Haar Cascade Classifier for face detection and recognition. This
-                technology ensures accurate and efficient identification of users by analyzing facial features.</li>
-
-                <li><b>Login Procedure:</b>
-
-                When logging in, the system captures the user's current photo and compares it against the stored photo
-                using the face recognition algorithm.
-                If the facial features match, the user is granted access to their portal.
-            </li>
-                <li><b>User Portal Access:</b>
-
-                Upon successful face recognition, the user is directed to their personalized user portal, providing a
-                seamless and secure login experience.</li>
-            </ul>
-            </p>
-            <div class="slideshowContainer">
-                <img class="imageSlides" src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM (1).jpeg"
-                    alt="Image 1" height="400px" width="700px">
-                <img class="imageSlides" src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM (2).jpeg"
-                    alt="Image 2" height="400px" width="700px">
-                <img class="imageSlides" src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM (3).jpeg"
-                    alt="Image 3" height="400px" width="700px">
-                <img class="imageSlides" src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM.jpeg" alt="Image 3"
-                    height="400px" width="700px">
                 <span id="leftArrow1" class="slideshowArrow">&#8249;</span>
                 <span id="rightArrow1" class="slideshowArrow">&#8250;</span>
+
                 <div class="slideshowCircles">
-                    <span class="circle dot"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
-                    <span class="circle"></span>
+                  <span class="circle dot"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
                 </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Arun7303/Face-Recognisition"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <button class="btn btn-outline-light btn-close-details">
+                  <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+              </div>
             </div>
-        </div>
+          </div>
 
-
-
-
-
-
-
-
-        <br><br><br>
-
-
-        <div class="project4">
-            <h2>Other projects</h2>
-            <div class="pro">
-                <h3>Basic Calculator</h3>
-                <a href="https://github.com/Arun7303/Python_Calculater"><button>View code</button></a>
-                <h3>Image Encryption</h3>
-                <a href="https://github.com/Arun7303/Imagr-Encryption"><button>View code</button></a>
+          <!-- Project 2 Details -->
+          <div
+            id="project2-details"
+            class="project-details"
+            style="display: none"
+          >
+            <div class="project-header">
+              <h2>AI Assistant for PC</h2>
+              <button class="btn btn-close-details">
+                <i class="fas fa-times"></i>
+              </button>
             </div>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+            <div class="project-body">
+              <h3>Project Overview</h3>
+              <p>
+                In this project, I utilized the Python language to create an AI
+                ASSISTANT FOR PC, aiming to assist with various day-to-day
+                tasks.
+              </p>
+
+              <h3>Functionality</h3>
+              <ul>
+                <li>
+                  The AI assistant can perform a range of tasks such as opening
+                  applications, telling jokes, and reading news.
+                </li>
+                <li>
+                  API keys have been incorporated to enable news reading, and
+                  additional API keys can be added to enhance the overall user
+                  experience and functionality.
+                </li>
+                <li>
+                  The assistant is capable of opening applications like Word,
+                  PowerPoint, Google, etc.
+                </li>
+                <li>
+                  Users can instruct the assistant to open commonly used
+                  websites or specify a particular website of their choice.
+                </li>
+                <li>
+                  Wikipedia can also be accessed through the program by stating
+                  "search Wikipedia for + query."
+                </li>
+                <li>
+                  Basic mathematical operations such as addition, subtraction,
+                  multiplication, and division can be performed using the
+                  assistant.
+                </li>
+              </ul>
+
+              <div class="slideshowContainer">
+                <img
+                  class="imageSlides"
+                  src="/images/AI assistant.png"
+                  alt="AI Assistant"
+                />
+
+                <span id="leftArrow2" class="slideshowArrow">&#8249;</span>
+                <span id="rightArrow2" class="slideshowArrow">&#8250;</span>
+
+                <div class="slideshowCircles">
+                  <span class="circle dot"></span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Arun7303/AI-ASSISTANT-FOR-PC"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <button class="btn btn-outline-light btn-close-details">
+                  <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 Details -->
+          <div
+            id="project3-details"
+            class="project-details"
+            style="display: none"
+          >
+            <div class="project-header">
+              <h2>Login Page with OTP</h2>
+              <button class="btn btn-close-details">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="project-body">
+              <h3>Project Overview</h3>
+              <p>
+                This website allows you to perform 2-step verification. When
+                logging in, you will need to enter an OTP that will be sent to
+                your email.
+              </p>
+
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  During the sign-up process on the website, for enhanced
+                  security, the password is hashed using the "SHA-256" algorithm
+                  and stored in the database.
+                </li>
+                <li>
+                  When logging in on the website, it will first check the
+                  entered password against the hashed password in the database.
+                </li>
+                <li>
+                  If the passwords match, you will receive an OTP in the email
+                  you used for signing up.
+                </li>
+                <li>
+                  Only after successful OTP verification will you be granted
+                  access to the system.
+                </li>
+              </ul>
+
+              <div class="slideshowContainer">
+                <img
+                  class="imageSlides"
+                  src="/images/Web/login.png"
+                  alt="Login Page"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/Web/signup.png"
+                  alt="Signup Page"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/Web/reset.png"
+                  alt="Reset Page"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/Web/otp.png"
+                  alt="OTP Page"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/Web/resetpass.png"
+                  alt="Reset Password"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/Web/final.png"
+                  alt="Final Page"
+                />
+
+                <span id="leftArrow3" class="slideshowArrow">&#8249;</span>
+                <span id="rightArrow3" class="slideshowArrow">&#8250;</span>
+
+                <div class="slideshowCircles">
+                  <span class="circle dot"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Arun7303/Website_with_otp"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <button class="btn btn-outline-light btn-close-details">
+                  <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 Details -->
+          <div
+            id="project4-details"
+            class="project-details"
+            style="display: none"
+          >
+            <div class="project-header">
+              <h2>Login With Face</h2>
+              <button class="btn btn-close-details">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="project-body">
+              <h3>Project Overview</h3>
+              <p>
+                A secure authentication system using OpenCV and Haar Cascade
+                Classifier for face recognition.
+              </p>
+
+              <h3>How It Works</h3>
+              <ul>
+                <li>
+                  <b>User Registration Process:</b> During the sign-up process,
+                  users are required to provide their details along with a
+                  photo. This photo is captured and saved in the system for
+                  future face recognition purposes.
+                </li>
+                <li>
+                  <b>Face Recognition Technology:</b> The website employs OpenCV
+                  (cv2) and Haar Cascade Classifier for face detection and
+                  recognition. This technology ensures accurate and efficient
+                  identification of users by analyzing facial features.
+                </li>
+                <li>
+                  <b>Login Procedure:</b> When logging in, the system captures
+                  the user's current photo and compares it against the stored
+                  photo using the face recognition algorithm. If the facial
+                  features match, the user is granted access to their portal.
+                </li>
+                <li>
+                  <b>User Portal Access:</b> Upon successful face recognition,
+                  the user is directed to their personalized user portal,
+                  providing a seamless and secure login experience.
+                </li>
+              </ul>
+
+              <div class="slideshowContainer">
+                <img
+                  class="imageSlides"
+                  src="/images/wl/WhatsApp Image 2024-05-25 at 11.50.31 AM.jpeg"
+                  alt="Login With Face"
+                />
+
+                <span id="leftArrow4" class="slideshowArrow">&#8249;</span>
+                <span id="rightArrow4" class="slideshowArrow">&#8250;</span>
+
+                <div class="slideshowCircles">
+                  <span class="circle dot"></span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="#" class="btn btn-primary" target="_blank">
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <button class="btn btn-outline-light btn-close-details">
+                  <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- project 5 Details -->
+          <div
+            id="project5-details"
+            class="project-details"
+            style="display: none"
+          >
+            <div class="project-header">
+              <h2>Insider Threat Detection using Machine Learning</h2>
+              <button class="btn btn-close-details">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+
+            <div class="project-body">
+              <h3>Project Overview</h3>
+              <p>
+                This project is a comprehensive solution designed to detect
+                insider threats within an organization by collecting real-time
+                user activity logs and applying
+                <b>machine learning algorithms</b> to identify anomalous
+                behavior. Built using <b>Flask</b>, <b>Socket.IO</b>, and other
+                technologies, the system ensures secure data transmission and
+                effective threat detection.
+              </p>
+
+              <h3>How This Code Works?</h3>
+              <ul>
+                <li>
+                  <b>Live Log Collection:</b> A lightweight client application
+                  continuously collects system logs, including file access, USB
+                  events, website visits, system info, login time, and more.
+                  These logs are securely sent to the central server.
+                </li>
+                <li>
+                  <b>Machine Learning:</b> The server uses ML models (like
+                  Isolation Forest) to analyze incoming logs and detect abnormal
+                  activities. Detected anomalies generate real-time alerts for
+                  the admin.
+                </li>
+                <li>
+                  <b>Alert Dashboard:</b> A real-time Flask dashboard displays
+                  system activity, alerts, and user risk scores. Admin can
+                  accept or reject users, monitor behavior, and respond
+                  accordingly.
+                </li>
+                <li>
+                  <b>Secure File Sharing:</b> A built-in secure file sharing
+                  system ensures confidential documents can be shared among
+                  users with access control mechanisms.
+                </li>
+                <li>
+                  <b>Technology Stack:</b> Python, Flask, Socket.IO,
+                  MongoDB/SQLite, scikit-learn, HTML/CSS/JS, Bootstrap, and
+                  more.
+                </li>
+              </ul>
+
+              <div class="slideshowContainer">
+                <img
+                  class="imageSlides"
+                  src="/images/insider_threat/dash.png"
+                  alt="Dashboard Screenshot"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/insider_threat/u1.png"
+                  alt="Logs Screenshot"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/insider_threat/u2.png"
+                  alt="Alert Screenshot"
+                />
+                <img
+                  class="imageSlides"
+                  src="/images/insider_threat/login.png"
+                  alt="Training Model Screenshot"
+                />
+
+                <span id="leftArrow5" class="slideshowArrow">&#8249;</span>
+                <span id="rightArrow5" class="slideshowArrow">&#8250;</span>
+
+                <div class="slideshowCircles">
+                  <span class="circle dot"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                  <span class="circle"></span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a
+                  href="https://github.com/Arun7303/final_year_project"
+                  class="btn btn-primary"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i> View Code
+                </a>
+                <button class="btn btn-outline-light btn-close-details">
+                  <i class="fas fa-arrow-left"></i> Back to Projects
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>adhikari.arun2812@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Location</h4>
+                  <p>Mumbai, Maharashtra, India</p>
+                </div>
+              </div>
+              <div class="contact-social">
+                <a href="https://github.com/Arun7303" target="_blank"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/arun-adhikari281202/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/adhikari_arun/"
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <form
+              id="contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="contact-form"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="e0e4429a-666e-416d-9567-03b4e3c3a741"
+              />
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your Phone"
+                  pattern="[0-9]{10}"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="images/img1.jpg"
+              alt="Logo"
+              width="40"
+              height="40"
+              class="rounded-circle me-2"
+            />
+            <span>Arun Adhikari</span>
+          </div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/Arun7303" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/arun-adhikari281202/"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://www.instagram.com/adhikari_arun/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Arun Adhikari. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Achievement Modal -->
+    <div
+      class="modal fade"
+      id="achievementModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Certificate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src=""
+              class="img-fluid certificate-img"
+              alt="Certificate"
+            />
+          </div>
+        </div>
+      </div>
     </div>
 
-
-    <!-- contact me section -->
-
-    <div id="contact-me-section" class="section">
-        <div class="contactme">
-            <h2><br>Contact Me</h2>
+    <!-- Certificate Modal -->
+    <div
+      class="modal fade"
+      id="certificateModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Certificate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src=""
+              class="img-fluid certificate-img"
+              alt="Certificate"
+            />
+          </div>
         </div>
-        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="e0e4429a-666e-416d-9567-03b4e3c3a741">
-
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit"><b>Submit</b></button>
-        </form>
-        <p class="contact-text">
-            Arun Adhikari<br>
-            adhikari.arun2812@gmail.com<br>
-            Mumbai, Maharashtra
-        </p>
-        <a href="Arun Resume .pdf"><button><b>Download Resume</b></button></a>
+      </div>
     </div>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
- <!-- achievements section  -->
-<div id="achievements-section" class="section" style="display: none;">
-    <div class="achievements">
-        <h2><br>MY ACHIEVEMENTS</h2>
-        <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-        <ul>
-            <!-- Achievement 1 -->
-            <li>Won first prize in Visinory Hackathon organized by Visinory Club.</li><br><br>
-            <div class="imgwin1">
-                <img src="/cert/hackathon cert/cyber_2023_winner_visio.png" alt="Visinory Hackathon" height="400" width="600"><br>
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-            <!-- Achievement 2 -->
-            <li>Won 3rd position in Visinory Techfest Hackathon 2024 organized by Vishwakarma University, Pune, in collaboration with Binghamton University, New York, in the domain of Cyber Security.</li><br><br>
-            <div class="imgwin2">
-                <img src="/cert/hackathon cert/cyber_tech_fest_24_winner.png" alt="Visinory Techfest Hackathon 2024" height="400" width="600"><br>
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Achievement 3 -->
-            <li>Won 2nd place in (NSD-2025) National Science Day 2025 Hackathon in the domain of AI. Our team made an anomaly detection system for network traffic.</li><br><br>
-            <div class="imgwin3">
-                <img src="/cert/hackathon cert/AI_Winners_2nd_Arun Adhikari.png" alt="NSD-2025 AI Hackathon" height="400" width="600"><br>
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-            <!-- Achievement 4 -->
-            <li>Won 2nd place in (NSD-2025) National Science Day 2025 Hackathon in the domain of Design and Thinking. Our team made an online pet store.</li><br><br>
-            <div class="imgwin4">
-                <img src="/cert/hackathon cert/D&T_Winners_1st_Arun Adhikari.png" alt="NSD-2025 Design Hackathon" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
+    <!-- Typed.js (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-            <!-- Achievement 5 -->
-            <li>Completed a workshop on Ethical Hacking and Cybercrime Investigation conducted by Slytherin Edutech.</li><br><br>
-            <div class="imgwin5">
-                <img src="/cert/hackathon cert/Screenshot 2025-03-18 033703.png" alt="Ethical Hacking Workshop" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <!-- Achievement 6 -->
-            <li>Completed a course on Cybersecurity in May 2023.</li><br><br>
-            <div class="imgwin6">
-                <img src="/cert/hackathon cert/Screenshot 2025-03-18 033754.png" alt="Cybersecurity Course" height="600" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <!-- Achievement 7 -->
-            <li>Completed the Cisco Introduction to Cybersecurity course.</li><br><br>
-            <div class="imgwin7">
-                <img src="/cert/hackathon cert/Screenshot 2025-03-18 034406.png" alt="Cisco Cybersecurity Course" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <!-- Achievement 8 -->
-            <li>Completed the SQL Injection Attacks course by EC-Council.</li><br><br>
-            <div class="imgwin8">
-                <img src="/cert/hackathon cert/sqlinjection.png" alt="SQL Injection Course" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <li>IBM introduction to cybersecurity Course.</li><br><br>
-            <div class="imgwin8">
-                <img src="/cert/coursera/ibm/Pasted image.png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/ibm/Pasted image (2).png" alt="SQL Injection Course" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <li>Fundamentals of Computer Network Security - University of Colorado.</li><br><br>
-            <div class="imgwin8">
-                <img src="/cert/coursera/university/Pasted image.png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/university/Pasted image (2).png" alt="SQL Injection Course" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-
-            <li>Other Certificates</li><br><br>
-            <div class="imgwin8">
-                <img src="/cert/coursera/lab/Pasted image.png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/lab/Pasted image (2).png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/lab/Pasted image (3).png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/lab/Pasted image (4).png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/lab/Pasted image (5).png" alt="SQL Injection Course" height="400" width="600">
-                <img src="/cert/coursera/lab/Pasted image (6).png" alt="SQL Injection Course" height="400" width="600">
-            </div>
-            <hr style="height:2px;border-width:1px;color:gray;background-color:gray">
-        </ul>
-
-    </div>
-</div>
-
-    <div id="courses-section" class="section" style="display: none;">
-        <div class="courses">
-            <ul>
-                <li>Received the 'Best Project Award' for the Face Recognition System project.</li>
-                <li>Completed a professional certification in Cybersecurity from Coursera.</li>
-                <li>Published a research paper on AI in the Journal of Computer Science.</li>
-                <li>Won the first prize in a state-level coding competition.</li>
-            </ul>
-            hello world
-        </div>
-    </div>
-
-
-
+    <!-- Custom JS -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
